@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clean Energy Analysis in Hawaii</title>
+
+    <link rel="stylesheet" type="text/css" href="./libraries/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">Clean Energy Analysis in Hawaii</h1>
+    <div class="container-fluid">
+        <div class="row">
+
+                <h3>
+                    1. Introduction
+                </h3>
+                <p>
+                    Hawaii is the last and the most recent state that joined the USA (1959). It is the only U.S. state that is located outside of contiguous U.S. There are eight main islands - Ni'ihau, Kauai, O'ahu, Moloka'i, Lana'i, Kaho'olawe, Maui, and the Island of Hawai'I, that spread over 1,500 miles. Many endemic species can be found on the islands since Hawaii is an isolated state from most of the countries. Hawaii has the highest number of endangered animals and plants in the U.S. The coastline is about 750 miles long, the longest coast lines after Alaska, Florida, and California. There are about 1.4 million people in the state of Hawaii. Since the islands are all isolated from each other, loaning electricity to each other is challenging. Additionally, unlike other states in the contiguous U.S., Hawaii is at a critical point that if there is a shortage in power, no other state would be available to lend. Therefore, Hawaii must generate electricity on their own.
+                </p>
+
+        </div>
+        <div class="colorDiv" id="div1">
+            <img src="hawaii-islands-map.jpg">
+        </div>
+        <div class="row">
+            <div class="col-md-12 svgBox1">
+
+                <h3>
+                    2. Clean Energy Produced by States
+                </h3>
+                <p>
+                    The following bar charts show clean energy produced by each state from 2006 to 2015. The top chart shows the produced energy sorting in amounts. The bottom chart shows the produced clean energy sorting in percentage over the total energy produced. As the charts show, Hawaii doesn’t produce much clean energy compared to other states. However, the state does contain a large portion of total energy produced in the state.
+                </p>
+
+                <input type="range" min="2006" max="2015" value="1" class="slider" id="mySlider">  Slide to See More Data from 2006 to 2015
+                <br>
+                <input type="radio" id="radioButton1" name="sort" value="amount" class='radio' checked>
+                <label for="radiobutton1">Sort by Amount</label>
+
+                <input type="radio" id="radioButton2" name="sort" value="percent" class='radio'>
+                <label for="radiobutton2">Sort by Percentage</label>
+
+                <br>
+                <div class="col-md-12">
+
+                    <svg width="100%" height="100%" id="svg1"></svg>
+                    <div class="bartooltip1"></div>
+                </div>
+
+                <div class="col-md-12">
+                    <svg width="100%" height="100%" id="svg2"></svg>
+                    <div class="bartooltip2"></div>
+                </div>
+
+            </div>
+
+                <h3>
+                    3. Existing Clean Energy Power Plants in Hawaii
+                </h3>
+                <p>
+                    Since most of islands in Hawaii are separated, each island must provide and generate their own power. The following map shows the three major clean energy types and their power plants locations along with information. The residents on each of the island will lean on these power plants to generate the electricity.
+                </p>
+
+                <div class="row svgBox2">
+
+                </div>
+
+            <div class="col-md-12">
+                <button type="button" class="box1" value="yellow" onclick="buttonClicked(this.value)">Solar Power </button>
+                <button type="button" class="box2" value="darkred" onclick="buttonClicked(this.value)">Wind Power </button>
+                <button type="button" class="box3" value="green" onclick="buttonClicked(this.value)">Geothermal Power </button>
+            </div>
+            <div class="col-md-12">
+                <svg width="100%" height="100%" id="svg3"></svg>
+                <div class="maptooltip"></div>
+            </div>
+        </div>
+        <div class="row">
+              
+                <h3>
+                    4. Hawaii Energy Usage Breakdown
+                </h3>
+                <p>
+                    Although Hawaii produced 98.3% of clean energy over total energy they generated in 2015, there are about 25,000 MWh of traditional energies (fuel, coal, and oil) that are still needed in some critical locations. Hawaii has announced that they will obtain 100% renewable clean energy usage in 2045, according to U.S. Department of Energy. Overall renewable energy is a plus for the environment, economy, and well-being of humans.
+                </p>
+                <svg width="100%" height="100%" id="svg4"></svg>
+                <div id='pie-tooltip'></div>
+        </div>
+    </div>
+
+    <script src="./libraries/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="./libraries/bootstrap.js"></script>
+    <script src="./libraries/d3.v4.min.js"></script>
+    <script src="./libraries/d3-queue.v3.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
